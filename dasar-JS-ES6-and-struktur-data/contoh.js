@@ -148,7 +148,9 @@ console.log("\n");
 
   let total = 0;
   for (let i = 1; i <= 5; i++) {
-    console.log(total + i);
+    console.log((total += i)); // menambah nilai dengan nilai sebelumnya
+
+    // console.log(total + i); // hanya mengganti nilai total dengan i
   }
 }
 
