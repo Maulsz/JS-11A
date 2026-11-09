@@ -232,7 +232,23 @@ console.log("\n");
 //          mengecek ada atau tidak = has(...)   (hasilnya true / false)
 {
   // TULIS KODEMU DI SINI
+  const daftarNamaPeserta = new Set();
+  daftarNamaPeserta.add("Budi");
+  daftarNamaPeserta.add("Sari");
+  daftarNamaPeserta.add("Budi"); // tidak terbaca karena set menolak data duplikat
+
+  console.log(
+    `Isi Set: ${daftarNamaPeserta}, total isi: ${daftarNamaPeserta.size}`,
+  );
+  console.log(
+    `Apakah di daftar ada nama Sari? : ${daftarNamaPeserta.has("Sari")}`,
+  );
+  console.log(
+    `Apakah di daftar ada nama Andi? : ${daftarNamaPeserta.has("Andi")}`,
+  );
 }
+
+console.log("\n");
 
 // #####################################################################
 //  MATERI 5 : includes() dan indexOf()
@@ -250,7 +266,12 @@ console.log("\n");
   const huruf = ["a", "b", "c"];
 
   // TULIS KODEMU DI SINI
+  const cekB = huruf.includes("b");
+  console.log(`Apakah di variable huruf, ada huruf b? ${cekB}`);
+  console.log(`Apakah di variable huruf, ada huruf z? ${huruf.includes("z")}`);
 }
+
+console.log("\n");
 
 // ---------- SOAL 5.2 ----------
 // SOAL   : Cari POSISI (index) 'c' di array huruf, lalu cari posisi 'z'.
@@ -263,9 +284,16 @@ console.log("\n");
 
   // TULIS KODEMU DI SINI
 
-  // JAWABANKU: includes() menghasilkan ... sedangkan indexOf() menghasilkan ...
+  const indexC = huruf.indexOf("c");
+  console.log(`C berada di index: ${indexC}`);
+  console.log(`Z berada di index: ${huruf.indexOf("z")}`);
+  // Dalam JavaScript, method indexOf() mengembalikan nilai -1 sebagai penanda (sentinel value)
+  //  untuk menyatakan bahwa elemen yang Anda cari tidak ada di dalam array.
+
+  // JAWABANKU: includes() menghasilkan nilai Boolean(true/false),  sedangkan indexOf() menghasilkan index ke-
 }
 
+console.log("\n");
 // =====================================================================
 //  KUNCI HASIL  (jangan dibuka sebelum mencoba!)
 // =====================================================================
