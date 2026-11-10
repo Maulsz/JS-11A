@@ -1,7 +1,6 @@
 // =====================================================================
 //  tugas.js  |  LATIHAN JAVASCRIPT DASAR  |  10 soal (2 soal per materi)
 // =====================================================================
-//
 //  CARA PAKAI
 //  1. Baca soalnya dari atas ke bawah.
 //  2. Ketik kodemu SENDIRI di dalam tanda { } milik soal itu

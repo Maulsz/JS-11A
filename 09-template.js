@@ -15,13 +15,17 @@
 //          3) tampilkan dengan console.log
 // CLUE   : tanda backtick ` ada di tombol kiri atas keyboard (di bawah Esc)
 //          menyisipkan variabel = ${namaVariabel}
+console.log("\n");
 {
+  console.info("---------- TUGAS 09 | SOAL 9.1 ----------");
   const nama = "Budi";
   const umur = 16;
 
   // TULIS KODEMU DI SINI
+  console.log(`Halo, nama saya ${nama}, umur saya ${umur} tahun`);
 }
 
+console.log("\n");
 // ---------- TUGAS 09 | SOAL 9.2 ----------
 // SOAL   : Tampilkan struk 2 baris dalam SATU template literal:
 //              Barang: Kopi
@@ -34,10 +38,19 @@
 //          pindah baris = tekan Enter langsung di dalam backtick
 //          HATI-HATI: baris kedua harus ditulis dari kolom paling kiri.
 //          Spasi di depannya ikut tercetak.
+
 {
+  console.info("---------- TUGAS 09 | SOAL 9.2 ----------");
   const barang = "Kopi";
   const harga = 15000;
   const qty = 3;
 
   // TULIS KODEMU DI SINI
+  console.log(`Barang: ${barang}
+               harga: ${harga}
+               quantity: ${qty}
+               total: ${harga * qty} 
+    `);
 }
+
+console.log("\n");

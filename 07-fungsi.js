@@ -19,12 +19,25 @@
 //             boleh dibuang
 // CLUE   : bentuk (a): const namaFungsi = (a, b) => { return ...; };
 //          bentuk (b): const namaFungsi = (a, b) => ...;
+
+console.log("\n");
 {
+  console.info("---------- TUGAS 07 | SOAL 7.1 ----------");
+
   function tambah(a, b) {
     return a + b;
   }
 
   // TULIS KODEMU DI SINI
+  const tambah2 = (a, b) => {
+    return a + b;
+  };
+
+  const tambah3 = (a, b) => a + b; // karena return/ekspresi nya cuman satu,, jadi kata kunci return dan kurung kurawal tidak diperlukan dalam kondisi ini
+
+  console.log(tambah(5, 10));
+  console.log(tambah2(10, 10));
+  console.log(tambah3(50, 50));
 }
 
 // ---------- TUGAS 07 | SOAL 7.2 ----------
@@ -42,6 +55,24 @@
 //          gabung teks pakai tanda +  (backtick baru dipelajari di materi 9)
 //          default HANYA dipakai kalau argumen tidak diisi / undefined.
 //          null itu bukan undefined.
+console.log("\n");
 {
+  console.info("---------- TUGAS 07 | SOAL 7.2 ----------");
   // TULIS KODEMU DI SINI
+
+  const sapa = (nama = "programer") => {
+    return "Halo " + nama;
+  };
+
+  const sapa2 = (nama = "developer") => "Halo " + nama;
+  console.info("SAPA");
+  console.log(sapa());
+  console.log(sapa("Pablo"));
+
+  console.log("\n");
+
+  console.info("SAPA2");
+  console.log(sapa2("Maul"));
+  console.log(sapa2());
 }
+console.log("\n");

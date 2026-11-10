@@ -15,7 +15,6 @@
 //          4) tampilkan jumlahnya lagi
 // CLUE   : tambah di akhir = push(...)   |   hapus di akhir = pop()
 //          jumlah isi array = buah.length   (tanpa tanda kurung)
-
 console.log("\n");
 // console.log("\n");
 {

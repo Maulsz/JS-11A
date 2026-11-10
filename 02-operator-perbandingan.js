@@ -25,10 +25,10 @@ console.log("\n");
   // tebakanku:  a)    b)    c)    d)
   // TULIS KODEMU DI SINI
   console.info("---------- TUGAS 02 | SOAL 2.1 ----------");
-  console.log(5 == "5"); // Predik Maul: true
-  console.log(5 === "5"); // Predik Maul: false
-  console.log(0 == false); // Predik Maul: true
-  console.log(0 === false); // Predik Maul: false
+  console.log(5 == "5"); // a) Predik Maul: true
+  console.log(5 === "5"); // b) Predik Maul: false
+  console.log(0 == false); // c) Predik Maul: true
+  console.log(0 === false); // d) Predik Maul: false
 }
 
 // ---------- TUGAS 02 | SOAL 2.2 ----------

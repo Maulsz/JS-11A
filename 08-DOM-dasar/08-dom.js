@@ -26,7 +26,6 @@
 //         <script src="08-dom.js"></script>
 //       </body>
 //       </html>
-//
 //    2) Buat file  08-dom.js  (satu folder dengan 08-index.html)
 //       dan tulis kodemu di sana.
 //    3) Buka 08-index.html di browser (klik dua kali), lalu tekan F12
@@ -58,3 +57,19 @@
 // CLUE   : mengubah warna = namaVariabel.style.color = "blue"
 //          id yang tidak ada menghasilkan nilai khusus (bukan error).
 //          Apa namanya? Itu jawabannya.
+
+// ---------- TUGAS 08 | SOAL 8.1 (dikerjakan di 08-dom.js) ----------
+const judul = document.getElementById("judul");
+console.log(judul.textContent);
+judul.textContent = "Halo Guys";
+console.log(judul.textContent);
+
+// ---------- TUGAS 08 | SOAL 8.2 (dikerjakan di 08-dom.js) ----------
+// const paragraf = document.getElementById("pesan");
+const paragraf = document.querySelector("#pesan");
+console.log(paragraf.textContent);
+
+paragraf.textContent = "Ubah Hehe ~~";
+paragraf.style.background = "red";
+
+console.log(paragraf.textContent);

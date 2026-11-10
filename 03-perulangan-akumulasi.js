@@ -16,8 +16,18 @@
 // CLUE   : bentuk loop: for (let i = 1; i <= 5; i++) { ... }
 //          menambah ke total: total = total + i
 //          total harus pakai let (nilainya berubah), bukan const
+console.log("\n");
+
 {
+  console.info("---------- TUGAS 03 | SOAL 3.1 ----------");
   // TULIS KODEMU DI SINI
+  let total = 0;
+
+  for (let i = 1; i <= 5; i++) {
+    // pake lebih kekcil atau sama dengan karena kita ingin berhenti di 5, kalo gak bisa infinite/nested loop
+    total = total + i;
+    console.log(total);
+  }
 }
 
 // ---------- TUGAS 03 | SOAL 3.2 ----------
@@ -29,8 +39,27 @@
 //          4) tampilkan total setelah loop selesai
 // CLUE   : index mulai dari 0, jadi loop: for (let i = 0; i < harga.length; i++)
 //          mengambil isi array di putaran ke-i = harga[i]
-{
-  const harga = [10000, 25000, 5000];
+console.log("\n");
 
+{
+  console.info("---------- TUGAS 03 | SOAL 3.2 ----------");
+  const harga = [10000, 25000, 5000];
   // TULIS KODEMU DI SINI
+  let total = 0;
+  for (let i = 0; i < harga.length; i++) {
+    // di kasus ini pake sama dengan saja, karena elemen array nya cuman 3
+    total += harga[i];
+    console.log(total);
+  }
+  //coba pake foreach
+  console.log("\n");
+  console.info("---------- TUGAS 03 | NYOBA FOREACH ----------");
+
+  let harga2 = [10000, 25000, 5000];
+  let total2 = 0;
+  harga2.forEach((angka) => {
+    return console.log((angka += total2));
+  });
 }
+
+console.log("\n");
