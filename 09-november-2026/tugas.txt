@@ -1,0 +1,522 @@
+// =====================================================================
+//  tugas.js  |  LATIHAN JAVASCRIPT DASAR (ES6)
+//  9 TUGAS x 2 SOAL = 18 soal   |   Selasa, 10 November 2026
+// =====================================================================
+//
+//  Setiap bagian di file ini adalah satu TUGAS (TUGAS 01 sampai TUGAS 09)
+//  dan punya 2 soal. Nama file tiap tugas tertulis di baris "FILE".
+//  File tugasnya kamu buat SENDIRI, file ini hanya berisi soalnya.
+//
+//  DAFTAR TUGAS
+//  ---------------------------------------------------------------
+//   TUGAS 01  Manipulasi Array        -> 01-manipulasi-array.js
+//   TUGAS 02  Operator Perbandingan   -> 02-operator-perbandingan.js
+//   TUGAS 03  Perulangan & Akumulasi  -> 03-perulangan-akumulasi.js
+//   TUGAS 04  Set (Data Unik)         -> 04-set-unique.js
+//   TUGAS 05  Pencarian Array         -> 05-pencarian-array.js
+//   TUGAS 06  Objek & Nested Object   -> 06-objek.js
+//   TUGAS 07  Arrow Function & Default Parameter -> 07-fungsi.js
+//   TUGAS 08  DOM Dasar               -> 08-dom.js + 08-index.html
+//   TUGAS 09  Template Literals       -> 09-template.js
+//  ---------------------------------------------------------------
+//
+//  CARA PAKAI
+//  1. Baca soalnya (SOAL, LOGIKA, CLUE).
+//  2. Ketik kodemu SENDIRI di bawah tulisan "TULIS KODEMU DI SINI",
+//     di dalam tanda { } milik soal itu.
+//  3. Jalankan:  node tugas.js     (atau salin ke console browser F12)
+//  4. Cocokkan hasilnya dengan "KUNCI HASIL" di paling bawah file.
+//  5. Kalau sudah benar, kodenya kamu pindahkan ke file tugas yang sesuai.
+//
+//  KENAPA TIAP SOAL DIBUNGKUS { } ?
+//  { } membuat BLOCK SCOPE (fitur ES6): variabel let / const di dalamnya
+//  hanya hidup di dalam blok itu. Jadi nama variabel yang sama (misalnya
+//  huruf, total) boleh dipakai lagi di soal lain tanpa error
+//  "Identifier has already been declared". Di file tugasmu sendiri,
+//  kurung { } ini tidak perlu dibawa.
+//
+//  Penjelasan materi lengkap ada di README.md.
+// =====================================================================
+
+
+// #####################################################################
+//  TUGAS 01 : Manipulasi Array (push, pop, length)
+//  FILE     : 01-manipulasi-array.js   <- file ini kamu buat sendiri
+//  ISI      : soal 1.1 dan 1.2
+//  TARGET   : bisa menjawab, kalau array ditambah 1 lalu dihapus 1,
+//             jumlahnya jadi berapa
+// #####################################################################
+
+// ---------- TUGAS 01 | SOAL 1.1 ----------
+// SOAL   : Array buah berisi 'apel'. Tambahkan 'jeruk', tampilkan jumlah
+//          isi array. Lalu hapus 1 elemen, tampilkan jumlah isi array lagi.
+// LOGIKA : 1) tambah 'jeruk' di akhir array
+//          2) tampilkan jumlahnya
+//          3) hapus elemen terakhir
+//          4) tampilkan jumlahnya lagi
+// CLUE   : tambah di akhir = push(...)   |   hapus di akhir = pop()
+//          jumlah isi array = buah.length   (tanpa tanda kurung)
+{
+  const buah = ["apel"];
+
+  // TULIS KODEMU DI SINI
+
+}
+
+// ---------- TUGAS 01 | SOAL 1.2 ----------
+// SOAL   : Tampilkan elemen TERAKHIR dari array huruf, tanpa menghapusnya.
+// LOGIKA : 1) hitung index terakhir (index mulai dari 0, jadi
+//             index terakhir = jumlah elemen dikurangi 1)
+//          2) ambil elemen di index itu
+//          3) tampilkan
+// CLUE   : jumlah elemen = huruf.length
+//          ambil elemen berdasarkan index = huruf[index]
+//          JANGAN pakai pop(), karena pop() menghapus elemennya
+{
+  const huruf = ["a", "b", "c"];
+
+  // TULIS KODEMU DI SINI
+
+}
+
+
+// #####################################################################
+//  TUGAS 02 : Operator Perbandingan (== vs ===)
+//  FILE     : 02-operator-perbandingan.js   <- file ini kamu buat sendiri
+//  ISI      : soal 2.1 dan 2.2
+//  TARGET   : bisa menebak output boolean jika tipe data berbeda
+// #####################################################################
+
+// ---------- TUGAS 02 | SOAL 2.1 ----------
+// SOAL   : Tampilkan hasil 4 perbandingan di bawah ini.
+//          TEBAK DULU jawabannya (true / false) di kertas atau komentar,
+//          BARU jalankan untuk memeriksa tebakanmu.
+//            a) 5 == "5"
+//            b) 5 === "5"
+//            c) 0 == false
+//            d) 0 === false
+// LOGIKA : 1) tebak a, b, c, d
+//          2) tulis console.log untuk masing-masing
+//          3) bandingkan hasilnya dengan tebakanmu
+// CLUE   : ==  = hanya cek nilai (tipe boleh diubah otomatis)
+//          === = cek nilai DAN tipe data harus sama
+{
+  // tebakanku:  a)    b)    c)    d)
+
+  // TULIS KODEMU DI SINI
+
+}
+
+// ---------- TUGAS 02 | SOAL 2.2 ----------
+// SOAL   : Variabel input berisi teks "18" (dari form, jadi bertipe string).
+//          Cek apakah nilainya SAMA PERSIS dengan angka 18.
+// LOGIKA : 1) ubah input menjadi angka
+//          2) bandingkan hasilnya dengan 18 memakai ===
+//          3) tampilkan hasilnya
+//          4) sebagai pembanding, tampilkan juga  input === 18  (tanpa diubah)
+// CLUE   : mengubah teks jadi angka = Number(input)
+{
+  const input = "18";
+
+  // TULIS KODEMU DI SINI
+
+}
+
+
+// #####################################################################
+//  TUGAS 03 : Perulangan & Akumulasi (for + total)
+//  FILE     : 03-perulangan-akumulasi.js   <- file ini kamu buat sendiri
+//  ISI      : soal 3.1 dan 3.2
+//  TARGET   : bisa tracing / menghitung manual nilai akhir variabel
+// #####################################################################
+
+// ---------- TUGAS 03 | SOAL 3.1 ----------
+// SOAL   : Jumlahkan angka 1 + 2 + 3 + 4 + 5 memakai for, lalu tampilkan.
+//          SEBELUM mengetik, buat tabel tracing di kertas:
+//              putaran | i | total sebelum | total sesudah
+// LOGIKA : 1) buat variabel total bernilai 0 (di LUAR loop)
+//          2) loop dengan i mulai 1 sampai 5
+//          3) di tiap putaran, tambahkan i ke total
+//          4) setelah loop selesai, tampilkan total
+// CLUE   : bentuk loop: for (let i = 1; i <= 5; i++) { ... }
+//          menambah ke total: total = total + i
+//          total harus pakai let (nilainya berubah), bukan const
+{
+  // TULIS KODEMU DI SINI
+
+}
+
+// ---------- TUGAS 03 | SOAL 3.2 ----------
+// SOAL   : Array harga berisi harga 3 barang. Hitung total semua harga
+//          memakai for, lalu tampilkan.
+// LOGIKA : 1) buat variabel total bernilai 0
+//          2) loop dari index 0 sampai elemen terakhir
+//          3) di tiap putaran, tambahkan harga[i] ke total
+//          4) tampilkan total setelah loop selesai
+// CLUE   : index mulai dari 0, jadi loop: for (let i = 0; i < harga.length; i++)
+//          mengambil isi array di putaran ke-i = harga[i]
+{
+  const harga = [10000, 25000, 5000];
+
+  // TULIS KODEMU DI SINI
+
+}
+
+
+// #####################################################################
+//  TUGAS 04 : Set (Data Unik)
+//  FILE     : 04-set-unique.js   <- file ini kamu buat sendiri
+//  ISI      : soal 4.1 dan 4.2
+//  TARGET   : tahu kapan harus pakai Set agar data tidak duplikat
+// #####################################################################
+
+// ---------- TUGAS 04 | SOAL 4.1 ----------
+// SOAL   : Array angka berisi data ganda. Buang duplikatnya memakai Set,
+//          lalu tampilkan (a) jumlah data uniknya dan (b) data uniknya
+//          dalam bentuk array.
+// LOGIKA : 1) masukkan array angka ke dalam Set
+//          2) tampilkan jumlah isi Set
+//          3) ubah Set kembali menjadi array, lalu tampilkan
+// CLUE   : membuat Set dari array = new Set(angka)
+//          jumlah isi Set = namaSet.size   (BUKAN .length)
+//          Set menjadi array = [...namaSet]
+{
+  const angka = [1, 1, 2, 3, 3];
+
+  // TULIS KODEMU DI SINI
+
+
+  // JAWABANKU: kapan sebaiknya pakai Set? ->
+
+}
+
+// ---------- TUGAS 04 | SOAL 4.2 ----------
+// SOAL   : Buat Set kosong untuk daftar nama peserta. Masukkan 'budi',
+//          'sari', lalu 'budi' lagi. Tampilkan jumlah isinya, lalu cek
+//          apakah 'sari' ada dan apakah 'andi' ada.
+// LOGIKA : 1) buat Set kosong
+//          2) tambahkan 'budi', 'sari', 'budi' satu per satu
+//          3) tampilkan jumlah isinya
+//          4) tampilkan hasil pengecekan 'sari', lalu 'andi'
+// CLUE   : Set kosong = new Set()
+//          menambah ke Set = add(...)
+//          mengecek ada atau tidak = has(...)   (hasilnya true / false)
+{
+  // TULIS KODEMU DI SINI
+
+}
+
+
+// #####################################################################
+//  TUGAS 05 : Pencarian Array (indexOf, includes)
+//  FILE     : 05-pencarian-array.js   <- file ini kamu buat sendiri
+//  ISI      : soal 5.1 dan 5.2
+//  TARGET   : bisa membedakan mana yang menghasilkan boolean
+//             dan mana yang menghasilkan index
+// #####################################################################
+
+// ---------- TUGAS 05 | SOAL 5.1 ----------
+// SOAL   : Cek apakah 'b' ada di array huruf, lalu cek apakah 'z' ada.
+// LOGIKA : 1) cek 'b' lalu tampilkan hasilnya
+//          2) cek 'z' lalu tampilkan hasilnya
+// CLUE   : cek ada atau tidak = huruf.includes(...)
+//          hasilnya berupa true atau false
+{
+  const huruf = ["a", "b", "c"];
+
+  // TULIS KODEMU DI SINI
+
+}
+
+// ---------- TUGAS 05 | SOAL 5.2 ----------
+// SOAL   : Cari POSISI (index) 'c' di array huruf, lalu cari posisi 'z'.
+// LOGIKA : 1) cari posisi 'c' lalu tampilkan hasilnya
+//          2) cari posisi 'z' lalu tampilkan hasilnya
+// CLUE   : mencari posisi = huruf.indexOf(...)
+//          hasilnya berupa ANGKA index; kalau tidak ketemu hasilnya -1
+{
+  const huruf = ["a", "b", "c"];
+
+  // TULIS KODEMU DI SINI
+
+
+  // JAWABANKU: includes() menghasilkan ... sedangkan indexOf() menghasilkan ...
+
+}
+
+
+// #####################################################################
+//  TUGAS 06 : Objek & Nested Object
+//  FILE     : 06-objek.js   <- file ini kamu buat sendiri
+//  ISI      : soal 6.1 dan 6.2
+//  TARGET   : bisa membuat object, mengakses / mengubah / menambah
+//             propertinya, dan membaca object di dalam object
+// #####################################################################
+
+// ---------- TUGAS 06 | SOAL 6.1 ----------
+// SOAL   : Buat object siswa berisi nama "Budi", umur 16, kelas "X-A".
+//          Lalu: tampilkan nama (pakai titik), tampilkan umur (pakai
+//          kurung siku), ubah umur jadi 17, tambah properti hobi
+//          "membaca", dan tampilkan seluruh object.
+// LOGIKA : 1) buat object dengan 3 properti
+//          2) tampilkan nama, lalu umur
+//          3) ubah isi umur
+//          4) tambah properti baru bernama hobi
+//          5) tampilkan seluruh object siswa
+// CLUE   : membuat object   = { kunci: nilai, kunci2: nilai2 }
+//          akses pakai titik = siswa.nama
+//          akses kurung siku = siswa["umur"]
+//          ubah / tambah     = siswa.umur = 17   |   siswa.hobi = "..."
+{
+  // TULIS KODEMU DI SINI
+
+}
+
+// ---------- TUGAS 06 | SOAL 6.2 ----------
+// SOAL   : Object sekolah punya object lain di dalamnya (alamat).
+//          Tampilkan kota dan jalan, ubah kota jadi "Bandung", tambah
+//          kodePos "40111" ke DALAM alamat, lalu tampilkan alamat.
+// LOGIKA : 1) masuk ke sekolah, lalu ke alamat, lalu ambil kota
+//          2) hal yang sama untuk jalan
+//          3) ubah isi kota di dalam alamat
+//          4) tambah properti kodePos di dalam alamat
+//          5) tampilkan seluruh alamat
+// CLUE   : nested object = rantai titik, dari luar ke dalam:
+//          sekolah.alamat.kota
+//          mengubah / menambah juga memakai rantai yang sama
+{
+  const sekolah = {
+    nama: "SMA Nusantara",
+    alamat: {
+      kota: "Jakarta",
+      jalan: "Jl. Merdeka No. 1",
+    },
+  };
+
+  // TULIS KODEMU DI SINI
+
+}
+
+
+// #####################################################################
+//  TUGAS 07 : Arrow Function & Default Parameter
+//  FILE     : 07-fungsi.js   <- file ini kamu buat sendiri
+//  ISI      : soal 7.1 dan 7.2
+//  TARGET   : bisa mengubah function biasa menjadi arrow function
+//             dan memakai default parameter
+// #####################################################################
+
+// ---------- TUGAS 07 | SOAL 7.1 ----------
+// SOAL   : Function biasa tambah() sudah ada di bawah. Tulis ulang jadi
+//          arrow function DUA kali:
+//            a) tambahA : arrow function dengan { } dan return
+//            b) tambahB : arrow function paling singkat (1 baris,
+//               tanpa { } dan tanpa return)
+//          Tampilkan tambahA(2, 3) dan tambahB(2, 3).
+// LOGIKA : 1) simpan fungsi ke variabel const, hapus kata function
+//          2) taruh tanda => setelah kurung parameter
+//          3) versi (b): isinya cuma satu ekspresi, jadi { } dan return
+//             boleh dibuang
+// CLUE   : bentuk (a): const namaFungsi = (a, b) => { return ...; };
+//          bentuk (b): const namaFungsi = (a, b) => ...;
+{
+  function tambah(a, b) {
+    return a + b;
+  }
+
+  // TULIS KODEMU DI SINI
+
+}
+
+// ---------- TUGAS 07 | SOAL 7.2 ----------
+// SOAL   : Buat arrow function sapa dengan satu parameter nama yang
+//          nilai defaultnya "Teman". Fungsi mengembalikan teks
+//          "Halo, <nama>!". Tampilkan:
+//            a) sapa()
+//            b) sapa("Budi")
+//            c) sapa(null)    <- TEBAK DULU hasilnya
+// LOGIKA : 1) buat arrow function dengan parameter nama
+//          2) beri nilai default untuk nama
+//          3) kembalikan teks "Halo, " + nama + "!"
+//          4) panggil 3 kali seperti di soal
+// CLUE   : default parameter = tulis tanda = di parameternya:  (nama = "...")
+//          gabung teks pakai tanda +  (backtick baru dipelajari di materi 9)
+//          default HANYA dipakai kalau argumen tidak diisi / undefined.
+//          null itu bukan undefined.
+{
+  // TULIS KODEMU DI SINI
+
+}
+
+
+// #####################################################################
+//  TUGAS 08 : DOM Dasar (getElementById)
+//  FILE     : 08-dom.js  +  08-index.html   <- file ini kamu buat sendiri
+//  ISI      : soal 8.1 dan 8.2
+//  TARGET   : bisa mengambil elemen HTML dengan getElementById
+//             lalu membaca dan mengubah isinya
+// #####################################################################
+//
+//  PENTING: DOM hanya ada di BROWSER, tidak di Node. Kalau soal 8 ditulis
+//  di tugas.js dan dijalankan dengan node, hasilnya error
+//  "document is not defined". Karena itu soal 8 dikerjakan LANGSUNG di
+//  dua file asli, lalu dibuka di browser:
+//
+//    1) Buat file  08-index.html  berisi:
+//
+//       <!DOCTYPE html>
+//       <html lang="id">
+//       <head>
+//         <meta charset="UTF-8">
+//         <title>Latihan DOM</title>
+//       </head>
+//       <body>
+//         <h1 id="judul">Belajar DOM</h1>
+//         <p id="pesan">Ini paragraf awal.</p>
+//
+//         <script src="08-dom.js"></script>
+//       </body>
+//       </html>
+//
+//    2) Buat file  08-dom.js  (satu folder dengan 08-index.html)
+//       dan tulis kodemu di sana.
+//    3) Buka 08-index.html di browser (klik dua kali), lalu tekan F12
+//       dan buka tab Console untuk melihat hasil console.log.
+//
+//  Catatan: tag <script> sengaja ditaruh di PALING BAWAH <body>. Kalau
+//  di atas, JavaScript jalan sebelum elemennya ada, hasilnya null.
+
+// ---------- TUGAS 08 | SOAL 8.1 (dikerjakan di 08-dom.js) ----------
+// SOAL   : Ambil elemen <h1 id="judul">. Tampilkan isi teksnya di
+//          console, lalu ubah teksnya menjadi "Halo, [namamu]!".
+// LOGIKA : 1) ambil elemen yang id-nya "judul", simpan di variabel
+//          2) tampilkan isi teks elemen itu di console
+//          3) isi teks elemen dengan kalimat baru
+// CLUE   : mengambil elemen = document.getElementById("judul")
+//          (tulis id-nya TANPA tanda #)
+//          isi teks elemen   = namaVariabel.textContent
+//          mengubah isi teks = namaVariabel.textContent = "teks baru"
+
+// ---------- TUGAS 08 | SOAL 8.2 (dikerjakan di 08-dom.js) ----------
+// SOAL   : Ambil elemen <p id="pesan">. Ubah teksnya jadi kalimat
+//          bebas dan ubah warna teksnya jadi biru. Lalu coba ambil
+//          id yang TIDAK ada ("tidak-ada") dan tampilkan hasilnya
+//          di console.
+// LOGIKA : 1) ambil elemen "pesan"
+//          2) ubah isi teksnya
+//          3) ubah warna teksnya
+//          4) console.log hasil getElementById untuk id yang tidak ada
+// CLUE   : mengubah warna = namaVariabel.style.color = "blue"
+//          id yang tidak ada menghasilkan nilai khusus (bukan error).
+//          Apa namanya? Itu jawabannya.
+
+
+// #####################################################################
+//  TUGAS 09 : Template Literals
+//  FILE     : 09-template.js   <- file ini kamu buat sendiri
+//  ISI      : soal 9.1 dan 9.2
+//  TARGET   : bisa menyisipkan variabel dan perhitungan ke dalam teks
+//             memakai backtick
+// #####################################################################
+
+// ---------- TUGAS 09 | SOAL 9.1 ----------
+// SOAL   : Dengan variabel nama dan umur, tampilkan kalimat:
+//          Halo, nama saya Budi, umur 16 tahun.
+//          Pakai template literal (backtick), BUKAN tanda +.
+// LOGIKA : 1) tulis kalimat di antara tanda backtick
+//          2) di tempat nama dan umur, sisipkan variabelnya
+//          3) tampilkan dengan console.log
+// CLUE   : tanda backtick ` ada di tombol kiri atas keyboard (di bawah Esc)
+//          menyisipkan variabel = ${namaVariabel}
+{
+  const nama = "Budi";
+  const umur = 16;
+
+  // TULIS KODEMU DI SINI
+
+}
+
+// ---------- TUGAS 09 | SOAL 9.2 ----------
+// SOAL   : Tampilkan struk 2 baris dalam SATU template literal:
+//              Barang: Kopi
+//              Total: Rp45000
+//          Total harus dihitung LANGSUNG di dalam ${ }  (harga x qty).
+// LOGIKA : 1) tulis baris pertama, sisipkan barang
+//          2) tekan Enter di dalam backtick untuk pindah baris
+//          3) tulis baris kedua, hitung harga x qty di dalam ${ }
+// CLUE   : ${ } boleh berisi perhitungan:  ${harga * qty}
+//          pindah baris = tekan Enter langsung di dalam backtick
+//          HATI-HATI: baris kedua harus ditulis dari kolom paling kiri.
+//          Spasi di depannya ikut tercetak.
+{
+  const barang = "Kopi";
+  const harga = 15000;
+  const qty = 3;
+
+  // TULIS KODEMU DI SINI
+
+}
+
+
+// =====================================================================
+//  KUNCI HASIL  (jangan dibuka sebelum mencoba!)
+// =====================================================================
+//
+//  1.1  tampil: 2   lalu   1
+//  1.2  tampil: c
+//
+//  2.1  tampil: true, false, true, false
+//  2.2  tampil: true   lalu   false
+//
+//  3.1  tampil: 15
+//  3.2  tampil: 40000
+//
+//  4.1  tampil: 3   lalu   [ 1, 2, 3 ]
+//  4.2  tampil: 2   lalu   true   lalu   false
+//
+//  5.1  tampil: true   lalu   false
+//  5.2  tampil: 2   lalu   -1
+//
+//  6.1  tampil: Budi
+//                16
+//                { nama: 'Budi', umur: 17, kelas: 'X-A', hobi: 'membaca' }
+//  6.2  tampil: Jakarta
+//                Jl. Merdeka No. 1
+//                { kota: 'Bandung', jalan: 'Jl. Merdeka No. 1', kodePos: '40111' }
+//
+//  7.1  tampil: 5   lalu   5
+//  7.2  tampil: Halo, Teman!
+//                Halo, Budi!
+//                Halo, null!      <- null BUKAN undefined, jadi default tidak dipakai
+//
+//  8.1  console tampil: Belajar DOM
+//       halaman: judul berubah jadi kalimat barumu
+//  8.2  halaman: paragraf berubah dan warnanya biru
+//       console tampil: null     <- id tidak ada = null
+//
+//  9.1  tampil: Halo, nama saya Budi, umur 16 tahun.
+//  9.2  tampil: Barang: Kopi
+//                Total: Rp45000
+//
+//  Jawaban pertanyaan:
+//  - Kapan pakai Set?  -> saat data tidak boleh ada yang ganda
+//                         (misalnya email / username peserta).
+//  - includes() menghasilkan boolean (true/false),
+//    indexOf() menghasilkan angka (index, atau -1 kalau tidak ada).
+//
+// =====================================================================
+//  CHECKLIST  (ganti [ ] menjadi [x] kalau sudah)
+// =====================================================================
+//  [ ] TUGAS 01 selesai -> dipindah ke 01-manipulasi-array.js
+//  [ ] TUGAS 02 selesai -> dipindah ke 02-operator-perbandingan.js
+//  [ ] TUGAS 03 selesai -> dipindah ke 03-perulangan-akumulasi.js  (+ tabel tracing)
+//  [ ] TUGAS 04 selesai -> dipindah ke 04-set-unique.js  (+ jawaban "kapan pakai Set")
+//  [ ] TUGAS 05 selesai -> dipindah ke 05-pencarian-array.js  (+ jawaban beda includes/indexOf)
+//  [ ] TUGAS 06 selesai -> dipindah ke 06-objek.js
+//  [ ] TUGAS 07 selesai -> dipindah ke 07-fungsi.js
+//  [ ] TUGAS 08 selesai -> dikerjakan di 08-dom.js + 08-index.html (dites di browser)
+//  [ ] TUGAS 09 selesai -> dipindah ke 09-template.js
+//  [ ] Tiap file: nama variabel sudah diganti + ada 1 baris komentar // penjelasan kalian
+//  [ ] 10 file sudah di-upload ke GitHub dengan nama file yang persis
+//  [ ] Link GitHub sudah dikumpulkan di Google Classroom sebelum jam batas
+// =====================================================================
